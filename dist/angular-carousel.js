@@ -20,7 +20,7 @@ angular.module('angular-carousel', [
 
 angular.module('angular-carousel')
 
-.directive('rnCarouselAutoSlide', ['$interval', function($interval) {
+.directive('rnCarouselAutoSlide', ['$interval','$timeout', function($interval, $timeout) {
   return {
     restrict: 'A',
     link: function (scope, element, attrs) {
