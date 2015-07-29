@@ -20,24 +20,13 @@ angular.module('angular-carousel', [
 
 angular.module('angular-carousel')
 
-.directive('rnCarouselAutoSlide', ['$interval','$timeout', function($interval, $timeout) {
+.directive('rnCarouselAutoSlide', ['$interval','$timeout', 'imageLoadingDataShare', function($interval, $timeout,imageLoadingDataShare) {
   return {
     restrict: 'A',
     link: function (scope, element, attrs) {
-      
-      //PP
-        $timeout(function(){
-
-                 var sliderimg = angular.element(element.find('img')[0]);
-                 sliderimg.bind('load',function()
-                 {
-                        alert ("*** BIND: IMAGE FULLY LOADED");
-                 });
-                 sliderimg[0].onload = function()
-                 {
-                        alert ("*** ONLOAD IMAGE FULLY LOADED");
-                };
-        });
+      alert ("THE VALUE OF THAT JIMMINY FACTORY IS " + imageLoadingDataShare.get());
+      //PP - trying to access factory
+        
 
 
       
