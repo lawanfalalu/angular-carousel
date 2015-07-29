@@ -31,11 +31,11 @@ angular.module('angular-carousel')
                  var sliderimg = angular.element(element.find('img')[0]);
                  sliderimg.bind('load',function()
                  {
-                        console.log ("*** BIND: IMAGE FULLY LOADED");
+                        alert ("*** BIND: IMAGE FULLY LOADED");
                  });
                  sliderimg[0].onload = function()
                  {
-                        console.log ("*** ONLOAD IMAGE FULLY LOADED");
+                        alert ("*** ONLOAD IMAGE FULLY LOADED");
                 };
         });
 
